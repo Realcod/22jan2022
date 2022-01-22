@@ -1,0 +1,20 @@
+/*
+Given a binary number as an integer N, convert it into decimal and print.
+*/
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+int main(){
+	int n,dec=0,power=0,x;
+	cout<<"Enter n"<<endl;
+	cin>>n;
+	
+	while(n>0){
+		x=n%10;
+		n=n/10;
+		dec=dec+x*pow(2,power);
+		power=power+1;
+	}
+	cout<<dec<<endl;
+}
