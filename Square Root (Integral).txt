@@ -1,0 +1,29 @@
+/*
+Given a number N, find its square root. You need to find and print only the integral part of square root of N.
+*/
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+int main(){
+	int n,i=1,square=1,prod;
+	cout<<"Enter n"<<endl;
+	cin>>n;
+	while(i<n){
+		prod=i*i;
+		if(prod<n){
+			square=i;
+			i++;
+			//continue;
+		}
+		else if(prod==n){
+			cout<<i<<endl;
+			break;
+		}
+		else if(prod>n){
+			cout<<square<<endl;
+			break;
+		}
+	}
+	
+}
